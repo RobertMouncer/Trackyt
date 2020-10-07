@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['trackyt-deployment.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'trackyt',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
