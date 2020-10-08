@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 't0=5f)n+x-g-rep^w!iqnvng#zhch&_x2t@ljryvnxyl7hc4^r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['trackyt-deployment.herokuapp.com']
 
@@ -32,7 +32,6 @@ ALLOWED_HOSTS = ['trackyt-deployment.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
-    'trackyt',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -57,7 +56,7 @@ ROOT_URLCONF = 't.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'homepage/templates/homepage')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

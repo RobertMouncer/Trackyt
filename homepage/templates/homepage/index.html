@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Trackyt</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script>
+      $(document).ready(function () {
+      	$(".button-collapse").sideNav();
+      });
+    </script>
+</head>
+<body>
+
+
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container sidenav-trigger">
+      <a id="logo-container" href="#" class="brand-logo">Trackyt</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<ul class="side-nav" id="mobile-demo" >
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Login</a></li>
+</ul>
+
+
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container valign">
+      <br><br>
+	  <h1 class="header center orange-text">COMING SOON</h1>
+      <h1 class="header center orange-text">Trackyt</h1>
+
+      <div class="row center">
+        <h3>It's free and open-source!</h3>
+        <h5 class="header col s12 light">A basic, but good-looking, issue tracking app for small teams and startups.</h5>
+
+      </div>
+      <div class="row center">
+        <a href="https://www.youtube.com/watch?v=6n3pFFPSlW4" id="download-button" class="btn-large waves-effect waves-light orange">COMING SOON!</a>
+      </div>
+      <br><br>
+
+    </div>
+</div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s6"><canvas id="myChart"></canvas></div>
+        <div class="col s6 "><canvas id="myChart3"></canvas></div>
+      </div>
+	  <div class="divider"></div>
+	  <div class="section"></div>
+      <table class="responsive-table striped highlight">
+	<thead>
+        <tr>
+          <th>Issue No.</th>
+          <th>Priority</th>
+          <th>Title</th>
+          <th>Owner</th>
+          <th>Responsible</th>
+		  <th>Est.</th>
+          <th>Project</th>
+          <th>Labels</th>
+        </tr>
+		</thead>
+		        <tbody>
+        <tr>
+          <td>213</td>
+          <td>Major</td>
+          <td>Change Trackyt name</td>
+          <td>Dave</td>
+          <td>Sam</td>
+          <td>2</td>
+          <td>Trackyt</td>
+          <td>Admin</td>
+        </tr>
+        <tr>
+          <td>34</td>
+          <td>Major</td>
+          <td>Fix Trackyt</td>
+          <td>Jack</td>
+          <td>Dave</td>
+          <td>4</td>
+          <td>Trackyt</td>
+          <td>Bug</td>
+        </tr>
+        <tr>
+          <td>1234</td>
+          <td>Med</td>
+          <td>Sort Priorites</td>
+          <td>Dave</td>
+          <td>Dave</td>
+          <td>1.5</td>
+          <td>All Projects </td>
+          <td>Admin</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>X-Small</td>
+          <td>Graphs</td>
+          <td>Sam</td>
+          <td>Rob</td>
+          <td>4</td>
+          <td>Secret Project</td>
+          <td>Bug</td>
+        </tr>
+        </tbody>
+      </table>
+	  	  <div class="divider"></div>
+	  <div class="section"></div>
+	  
+      <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">phonelink_off</i></h2>
+            <h5 class="center">Easy to setup or host your own!</h5>
+
+            <p class="center light">Either login to access your issues, or host on your own server! Follow the installation guide on Github.</p>
+          </div>
+        </div>
+	  <div class="divider"></div>
+	  <div class="section"></div>
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">tag_faces</i></h2>
+            <h5 class="center">Simplicity is key</h5>
+
+            <p class="center light">If a complex issue tracking works for you then that's great, you are one of many! This tool is designed to be easy to use with limited features to keep things simple so it isn't Gods work!</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br><br>
+
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">A project by Robert Mouncer</h5>
+          <p class="grey-text text-lighten-4">This product is a gateway for myself to get back into web development. Something I truly miss. I can't promise this product will work as you hope but I'm trying my best! Any feedback or help is greatly appreciated.</p>
+
+
+        </div>
+		<div class="col l3 s12">
+        </div>
+        <div class="col l3 s12 ">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="https://github.com/RobertMouncer/Trackyt">GitHub</a></li>
+            <li><a class="white-text" href="https://www.linkedin.com/in/robert-mouncer-66784811b">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+// The type of chart we want to create
+type: 'line',
+
+// The data for our dataset
+data: {
+labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+datasets: [{
+label: ['Project Progress'],
+backgroundColor: 'rgb(255, 99, 132)',
+borderColor: 'rgb(255, 99, 132)',
+data: [0, 10, 5, 2, 20, 30, 45]
+}]
+},
+
+// Configuration options go here
+options: {}
+});
+</script>
+<script>
+new Chart(document.getElementById("myChart3"), {
+    type: 'bar',
+    data: {
+      labels: ["Major", "High", "Med", "Small", "X-Small"],
+      datasets: [
+        {
+          label: "Ticket Items",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+          data: [15,21,18,4,11]
+        }
+      ]
+    },
+    options: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Open issues by priority'
+      }
+    }
+});
+</script>
+<style>
+ 
+table.highlight > tbody > tr:hover {
+ 
+  background-color: rgba(255, 181, 145, 0.5);
+ 
+}
+ 
+</style>
+  </body>
+  
+</html>
