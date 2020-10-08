@@ -19,21 +19,31 @@
 </head>
 <body>
 
-
   <nav class="light-blue lighten-1" role="navigation">
     <div class="nav-wrapper container sidenav-trigger">
       <a id="logo-container" href="#" class="brand-logo">Trackyt</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Login</a></li>
+        {% block content %}
+        {% if user.is_authenticated %}
+          <li><a href="/accounts/logout">Logout</a>/li>
+        {% else %}
+          <li><a href="/accounts/login">Login</a></li>
+        {% endif %}
+        {% endblock %}
+
       </ul>
     </div>
   </nav>
 
 <ul class="side-nav" id="mobile-demo" >
-  <li class="active"><a href="#">Home</a></li>
-  <li><a href="#">Login</a></li>
+  {% block sidenav-content %}
+  {% if user.is_authenticated %}
+    <li>{{ user.username }}</li>
+  {% else %}
+    <li><a href="/accounts/login">Login</a></li>
+  {% endif %}
+  {% endblock %}
 </ul>
 
 
@@ -124,7 +134,7 @@
       </table>
 	  	  <div class="divider"></div>
 	  <div class="section"></div>
-	  
+
       <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center light-blue-text"><i class="material-icons">phonelink_off</i></h2>
@@ -214,14 +224,14 @@ new Chart(document.getElementById("myChart3"), {
 });
 </script>
 <style>
- 
+
 table.highlight > tbody > tr:hover {
- 
+
   background-color: rgba(255, 181, 145, 0.5);
- 
+
 }
- 
+
 </style>
   </body>
-  
+
 </html>
